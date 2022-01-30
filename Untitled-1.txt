@@ -1,0 +1,8 @@
+Challenge requirements:
+
+Create a Restful API with NodeJS and implement the following functionality:
+    A Login endpoint that enables user authentication and returns a JWT token if authentication is successful.
+    An UpdateUser endpoint that makes use of the JWT token and authorizes an update to the user information 
+        only if the requestor user is the same as the targeted user for update.
+    Create the Unit Tests that can be implemented for Test Automation
+

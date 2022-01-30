@@ -1,0 +1,14 @@
+{
+    "extends": ["tslint:latest", "tslint-config-prettier"],
+    "rules": {
+      "no-unused-expression-chai": true,
+      "no-implicit-dependencies": [true, "dev"],
+      "object-literal-shorthand": [true, "never"],
+      "no-var-requires": false
+      
+    },
+    "rulesDirectory": ["tslint-no-unused-expression-chai"],
+    "linterOptions": {
+        "exclude": ["src/client/**"]
+    }
+}

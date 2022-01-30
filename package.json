@@ -1,0 +1,59 @@
+{
+  "name": "interviewnode",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node dist/server.js",
+    "build": "npm run format && npm run eslint && tsc",
+    "format": "prettier --write \"{src,test}/**/*.ts\"",
+    "watch-ts": "tsc -w",
+    "debug": "npm run build && npm run watch-debug",
+    "serve-debug": "nodemon --inspect=127.0.0.1:9230 dist/server.js",
+    "watch-debug": "concurrently -k -p \"[{name}]\" -n \"Typescript,Node\" -c \"yellow.bold.,cyan.bold,green.bold\" \"npm run watch-ts\" \"npm run serve-debug\"",
+    "eslint": "eslint --cache --color \"src/**/*.ts\"",
+    "eslint-fix": "eslint --cache --color --fix \"src/**/*.ts\"",
+    "test": "jest"
+  },
+  "author": "Luis Gallegos",
+  "license": "ISC",
+  "prettier": {
+    "singleQuote": true
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.12",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "@types/body-parser": "^1.19.2",
+    "@types/dotenv": "^4.0.3",
+    "@types/express": "^4.17.13",
+    "@types/jest": "^27.4.0",
+    "@types/jwt-simple": "^0.5.33",
+    "@types/node": "^17.0.12",
+    "@types/node-statsd": "^0.1.3",
+    "@types/supertest": "^2.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.10.1",
+    "@typescript-eslint/parser": "^5.10.1",
+    "babel-jest": "^27.4.6",
+    "concurrently": "^3.6.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "jest": "^27.4.7",
+    "prettier": "^2.5.1",
+    "supertest": "^6.2.2",
+    "ts-node": "^10.4.0",
+    "typescript": "^3.9.10"
+  },
+  "dependencies": {
+    "@types/underscore": "^1.11.4",
+    "body-parser": "^1.19.1",
+    "dotenv": "^14.3.0",
+    "express": "^4.16.4",
+    "jwt-simple": "^0.5.6",
+    "node-statsd": "^0.1.1",
+    "underscore": "^1.13.2"
+  }
+}
